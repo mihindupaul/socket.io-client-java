@@ -123,12 +123,12 @@ public class Manager extends Emitter {
         if (opts.path == null) {
             opts.path = "/socket.io";
         }
-        if (opts.sslContext == null) {
-            opts.sslContext = defaultSSLContext;
-        }
-        if (opts.hostnameVerifier == null) {
-            opts.hostnameVerifier = defaultHostnameVerifier;
-        }
+//        if (opts.sslContext == null) {
+//            opts.sslContext = defaultSSLContext;
+//        }
+//        if (opts.hostnameVerifier == null) {
+//            opts.hostnameVerifier = defaultHostnameVerifier;
+//        }
         this.opts = opts;
         this.nsps = new ConcurrentHashMap<String, Socket>();
         this.subs = new LinkedList<On.Handle>();
@@ -594,9 +594,9 @@ public class Manager extends Emitter {
     }
 
 
-    public static interface OpenCallback {
+    public interface OpenCallback {
 
-        public void call(Exception err);
+        void call(Exception err);
     }
 
 

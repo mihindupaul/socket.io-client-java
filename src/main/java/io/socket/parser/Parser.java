@@ -131,7 +131,7 @@ public class Parser {
 
         public interface Callback {
 
-            public void call(Object[] data);
+            void call(Object[] data);
         }
     }
 
